@@ -30,12 +30,77 @@
             <p>
                 information om ramverket </p>
             <a href="https://getbootstrap.com/">Länk till webbplats</a>
-            
+
             <h3>För- och nackdelar</h3>
 
-            <h3>Tabell</h3>
 
-            <h3>Formulär</h3>
+            <h3>Demo av tabeller och formulär</h3>
+
+            <h4>Tabell</h4>
+            <p>En tabell som listar katter.</p>
+            <table id="catTable" class="table table-striped">
+                <tr>
+                    <th class="table-success">Namn</th>
+                    <th class="table-success">Storlek</th>
+                    <th class="table-success">Beskrivning</th>
+                    <th class="table-success">Rekommenderad</th>
+                </tr>
+                <tr>
+                    <td>Mini</td>
+                    <td>Liten</td>
+                    <td>Mini är en trefärgad katt som älksar att gosa.</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Pelle</td>
+                    <td>Medium</td>
+                    <td>Pelle har ingen svans för en råtta bet av den när han var liten.</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Gustaf</td>
+                    <td>Stor</td>
+                    <td>Gustaf är orange och älskar att äta lasagne.</td>
+                    <td>Nej</td>
+                </tr>
+            </table>
+
+            <h4 class="mt-5">Formulär</h4>
+            <p>Ett formulär för att lägga till en katt i tabellen ovan.</p>
+            <form class="p-2">
+                <div class="was-validated">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Namn på katten: </label>
+                        <input type="text" class="form-control" name="name" id="name" required>
+                        <div class="invalid-feedback">Vänligen fyll i detta fält.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="size">Storlek: </label>
+                        <select class="form-select mb-3" name="size" id="size">
+                            <option value="small">Liten</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Stor</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Beskrivning: </label>
+                        <textarea class="form-control" name="description" id="description" required></textarea>
+                        <div class="invalid-feedback">Vänligen fyll i detta fält.</div>
+                    </div>
+
+                </div>
+                <p class="mt-2 mb-1">Skulle du rekommendera den här katten?</p>
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="recommended" name="recommended"
+                        value="recommended">
+                    <label class="form-check-label" for="recommended">Ja, jag skulle rekommendera den här
+                        katten.</label>
+                </div>
+                <button class="btn btn-success" id="addCat">Lägg till katt</button>
+            </form>
 
         </main>
 
@@ -50,6 +115,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
