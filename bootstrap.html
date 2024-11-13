@@ -49,6 +49,28 @@
                     <!-- Fylls på från localStorage -->
                 </tbody>
             </table>
+            <button id="toggleModal" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#clearStorageModal">Rensa tabell</button>
+            
+            <div class="modal" id="clearStorageModal" tabindex="-1" role="dialog" aria-labelledby="clearStorageModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="clearStorageModalLabel">Radera tabelldata</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Är du säker på att du vill tömma tabellen?</p>
+                            <p>Tömmer du tabellen rensas också dess data från LocalStorage.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="clearStorageBtn" class="btn btn-danger" data-bs-dismiss="modal">Radera tabelldata</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
 
             <h4 class="mt-5">Formulär</h4>
             <p>Ett formulär för att lägga till en katt i tabellen ovan.</p>
@@ -64,9 +86,9 @@
                     <div class="mb-3">
                         <label class="form-label" for="size">Storlek: </label>
                         <select class="form-select mb-3" name="size" id="size">
-                            <option value="small">Liten</option>
+                            <option value="liten">Liten</option>
                             <option value="medium">Medium</option>
-                            <option value="large">Stor</option>
+                            <option value="stor">Stor</option>
                         </select>
                     </div>
 
