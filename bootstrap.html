@@ -15,8 +15,8 @@
             <h1 class="text-light">CSS-ramverk & publiceringsplattormar</h1>
             <nav class="navbar navbar-expand-sm mt-4 navbar-dark">
                 <ul class="navbar-nav">
-                    <li class="nav-item me-4"><a class="nav-link active" href="index.html">Start</a></li>
-                    <li class="nav-item me-4"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                    <li class="nav-item me-4"><a class="nav-link " href="index.html">Start</a></li>
+                    <li class="nav-item me-4"><a class="nav-link active" href="bootstrap.html">Bootstrap</a></li>
                     <li class="nav-item me-4"><a class="nav-link" href="">Ramverk 2</a></li>
                     <li class="nav-item me-4"><a class="nav-link" href="">Publicering</a></li>
                 </ul>
@@ -38,7 +38,7 @@
 
             <h4>Tabell</h4>
             <p>En tabell som listar katter.</p>
-            <table id="catTable" class="table table-striped">
+            <table id="catTable" class="table table-striped table-bordered">
                 <thead>
                     <th class="table-success">Namn</th>
                     <th class="table-success">Storlek</th>
@@ -49,9 +49,11 @@
                     <!-- Fylls på från localStorage -->
                 </tbody>
             </table>
-            <button id="toggleModal" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#clearStorageModal">Rensa tabell</button>
-            
-            <div class="modal" id="clearStorageModal" tabindex="-1" role="dialog" aria-labelledby="clearStorageModalLabel" aria-hidden="true">
+            <button id="toggleModal" type="button" class="btn btn-danger" data-bs-toggle="modal"
+                data-bs-target="#clearStorageModal">Rensa tabell</button>
+
+            <div class="modal" id="clearStorageModal" tabindex="-1" role="dialog"
+                aria-labelledby="clearStorageModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -63,14 +65,15 @@
                             <p>Tömmer du tabellen rensas också dess data från LocalStorage.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" id="clearStorageBtn" class="btn btn-danger" data-bs-dismiss="modal">Radera tabelldata</button>
+                            <button type="button" id="clearStorageBtn" class="btn btn-danger"
+                                data-bs-dismiss="modal">Radera tabelldata</button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
+
 
             <h4 class="mt-5">Formulär</h4>
             <p>Ett formulär för att lägga till en katt i tabellen ovan.</p>
@@ -86,9 +89,9 @@
                     <div class="mb-3">
                         <label class="form-label" for="size">Storlek: </label>
                         <select class="form-select mb-3" name="size" id="size">
-                            <option value="liten">Liten</option>
-                            <option value="medium">Medium</option>
-                            <option value="stor">Stor</option>
+                            <option value="Liten">Liten</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Stor">Stor</option>
                         </select>
                     </div>
 
@@ -112,11 +115,11 @@
         </main>
 
     </div>
-    <footer class="mt-4 p-4 pb-2 bg-dark text-white text-center ">
+
+    <footer class="mt-5 p-4 pb-2 bg-dark text-white text-center ">
         <p class="small text-center">Inlämningsuppgift för moment 1 i kursen Fullstack-utveckling med ramverk (DT193G)
-            vid Mittuniversitetet,
-            HT24
-            skapad av Kajsa Classon.</p>
+            vid Mittuniversitetet, HT24 skapad av Kajsa Classon.</p>
+            <p class="small text-center">Denna sida använder LocalStorage för att lagra tabelldata.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

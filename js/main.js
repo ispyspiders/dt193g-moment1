@@ -20,13 +20,13 @@ function init() {
 
 if(localStorage.getItem("visited")===null){
       let sampleData = [
-            { name: "Pelle", size: "medium", description: "Pelle har ingen svans för en råtta bet av den när han var liten.", recommended: "Ja" },
+            { name: "Pelle", size: "Medium", description: "Pelle har ingen svans för en råtta bet av den när han var liten.", recommended: "Ja" },
             {
-                name: "Måns", size: "medium", description: "Måns är en elak katt som brukar reta Pelle.",
+                name: "Måns", size: "Medium", description: "Måns är en elak katt som brukar reta Pelle.",
             },
-            { name: "Oliver", size: "liten", description: "Gänget följer med på köpet.", recommended: "Ja" },
-            { name: "Gustav", size: "stor", description: "Orange. Älskar att äta lasagne", recommended: "Ja" },
-            { name: "Mäster katten", size: "medium", description: "Har stövlar.", recommended: "Ja" }
+            { name: "Oliver", size: "Liten", description: "Gänget följer med på köpet.", recommended: "Ja" },
+            { name: "Gustav", size: "Stor", description: "Orange. Älskar att äta lasagne", recommended: "Ja" },
+            { name: "Mäster katten", size: "Medium", description: "Har stövlar.", recommended: "Ja" }
         ]
 
         localStorage.setItem('catData', JSON.stringify(sampleData));
@@ -82,6 +82,8 @@ function saveCatData() {
     // Spara till localStorage
     localStorage.setItem('catData', JSON.stringify(savedCats));
 
+    nameInputEl.value= "";
+    descriptionInputEl.value= "";
 }
 
 // Visa data i tabell
