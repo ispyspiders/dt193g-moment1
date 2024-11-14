@@ -32,8 +32,6 @@ if(localStorage.getItem("visited")===null){
         localStorage.setItem('catData', JSON.stringify(sampleData));
         localStorage.setItem("visited", true);
 }
-
-
     loadStorage();
 }
 
