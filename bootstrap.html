@@ -26,91 +26,124 @@
 
     <div class="container bg-light">
         <main class="p-5">
-            <h2>Bootstrap</h2>
-            <p>
-                information om ramverket </p>
-            <a href="https://getbootstrap.com/">Länk till webbplats</a>
+            <h2 class="mb-4">Bootstrap</h2>
+            <div class="container">
+                <div class="row">
+                    <section class="col-lg me-2">
+                        <h3>Om Bootstrap</h3>
+                        <p>
+                            <a href="https://getbootstrap.com/">Bootstrap</a>
+                            är ett mycket populärt ramverk som går att använda med enbart CSS eller med CSS + JavaScript
+                            (jQuery för version 4 och neråt). Det är nybörjar-vänligt med en omfattande dokumentation
+                            och ett
+                            utbrett community att fråga om hjälp.
+                        </p>
+                        <p>Bootstrap innehåller bland annat grid-system och färdiga komponenter så som knappar. Det är
+                            responsivt och håller måttet i olika webbläsare. Det finns också extra verktyg för att lägga
+                            till animeringar et cetera.
+                        </p>
+                        <p>Det är möjligt att göra egna modifieringar i utseendet med hjälp av SASS/CSS.
+                        </p>
+                    </section>
 
-            <h3>För- och nackdelar</h3>
-
-
-            <h3>Demo av tabeller och formulär</h3>
-
-            <h4>Tabell</h4>
-            <p>En tabell som listar katter.</p>
-            <table id="catTable" class="table table-striped table-bordered">
-                <thead>
-                    <th class="table-success">Namn</th>
-                    <th class="table-success">Storlek</th>
-                    <th class="table-success">Beskrivning</th>
-                    <th class="table-success">Rekommenderad</th>
-                </thead>
-                <tbody>
-                    <!-- Fylls på från localStorage -->
-                </tbody>
-            </table>
-            <button id="toggleModal" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                data-bs-target="#clearStorageModal">Rensa tabell</button>
-
-            <div class="modal" id="clearStorageModal" tabindex="-1" role="dialog"
-                aria-labelledby="clearStorageModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="clearStorageModalLabel">Radera tabelldata</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Är du säker på att du vill tömma tabellen?</p>
-                            <p>Tömmer du tabellen rensas också dess data från LocalStorage.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="clearStorageBtn" class="btn btn-danger"
-                                data-bs-dismiss="modal">Radera tabelldata</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
-                        </div>
-                    </div>
+                    <section class="col-lg p-4 me-2 bg-success-subtle rounded">
+                        <h3>Mina åsikter</h3>
+                        <p>Jag tycker det var väldigt smidigt att jobba med, när man väl kom in i tänket. Speciellt
+                            användbart var den inbyggda funktionaliteten för modals, alerts osv. Det var enkelt att
+                            använda då man inte behövde skriva någon egen JavaScript-kod, perfekt för en nybörjare!</p>
+                        <p>Nackdelen är att ramverket känns lite stelt. Det låter en inte göra några större
+                            utsvävningar, speciellt om man inte vill ge sig in och skriva SASS.
+                        </p>
+                        <p>Jag skulle kunna tänka mig att arbeta mer med Bootstrap, men kanske framför allt till mindre
+                            uppgifter och admingränssnitt osv. Jag tycker själva designbiten är på tok för rolig för att
+                            låta ett ramverk sköta så stora delar av den i projekt som faktiskt spelar roll.</p>
+                    </section>
                 </div>
             </div>
 
 
+            <section class="mt-5">
+                <h3>Demo av tabeller och formulär</h3>
 
-            <h4 class="mt-5">Formulär</h4>
-            <p>Ett formulär för att lägga till en katt i tabellen ovan.</p>
-            <form class="p-2">
-                <div class="was-validated">
+                <h4>Tabell</h4>
+                <p>En tabell som listar katter.</p>
+                <table id="catTable" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="table-success">Namn</th>
+                            <th class="table-success">Storlek</th>
+                            <th class="table-success">Beskrivning</th>
+                            <th class="table-success">Rekommenderad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fylls på från localStorage -->
+                    </tbody>
+                </table>
+                <button id="toggleModal" type="button" class="btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#clearStorageModal">Rensa tabell</button>
 
-                    <div class="mb-3">
-                        <label class="form-label" for="name">Namn på katten: </label>
-                        <input type="text" class="form-control" name="name" id="name" required>
-                        <div class="invalid-feedback">Vänligen fyll i detta fält.</div>
+                <div class="modal" id="clearStorageModal" tabindex="-1" role="dialog"
+                    aria-labelledby="clearStorageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="clearStorageModalLabel">Radera tabelldata</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Är du säker på att du vill tömma tabellen?</p>
+                                <p>Tömmer du tabellen rensas också dess data från LocalStorage.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="clearStorageBtn" class="btn btn-danger"
+                                    data-bs-dismiss="modal">Radera tabelldata</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="mb-3">
-                        <label class="form-label" for="size">Storlek: </label>
-                        <select class="form-select mb-3" name="size" id="size">
-                            <option value="Liten">Liten</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Stor">Stor</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label" for="description">Beskrivning: </label>
-                        <textarea class="form-control" name="description" id="description" required></textarea>
-                        <div class="invalid-feedback">Vänligen fyll i detta fält.</div>
-                    </div>
-
                 </div>
-                <p class="mt-2 mb-1">Skulle du rekommendera den här katten?</p>
-                <div class="form-check mb-4">
-                    <input class="form-check-input" type="checkbox" id="recommended" name="recommended"
-                        value="recommended">
-                    <label class="form-check-label" for="recommended">Ja, jag skulle rekommendera den här
-                        katten.</label>
-                </div>
-                <button class="btn btn-success" id="addCat">Lägg till katt</button>
-            </form>
+
+
+
+                <h4 class="mt-5">Formulär</h4>
+                <p>Ett formulär för att lägga till en katt i tabellen ovan.</p>
+                <form class="p-4 bg-secondary-subtle rounded">
+                    <div class="was-validated">
+
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Namn på katten: </label>
+                            <input type="text" class="form-control" name="name" id="name" required>
+                            <div class="invalid-feedback">Vänligen fyll i detta fält.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="size">Storlek: </label>
+                            <select class="form-select mb-3" name="size" id="size">
+                                <option value="Liten">Liten</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Stor">Stor</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="description">Beskrivning: </label>
+                            <textarea class="form-control" name="description" id="description" required></textarea>
+                            <div class="invalid-feedback">Vänligen fyll i detta fält.</div>
+                        </div>
+
+                    </div>
+                    <p class="mt-2 mb-1">Skulle du rekommendera den här katten?</p>
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="recommended" name="recommended"
+                            value="recommended">
+                        <label class="form-check-label" for="recommended">Ja, jag skulle rekommendera den här
+                            katten.</label>
+                    </div>
+                    <button class="btn btn-success" id="addCat">Lägg till katt</button>
+                </form>
+            </section>
 
         </main>
 
@@ -119,7 +152,7 @@
     <footer class="mt-5 p-4 pb-2 bg-dark text-white text-center ">
         <p class="small text-center">Inlämningsuppgift för moment 1 i kursen Fullstack-utveckling med ramverk (DT193G)
             vid Mittuniversitetet, HT24 skapad av Kajsa Classon.</p>
-            <p class="small text-center">Denna sida använder LocalStorage för att lagra tabelldata.</p>
+        <p class="small text-center">Denna sida använder LocalStorage för att lagra tabelldata.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
