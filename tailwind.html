@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment 1 - CSS-ramverk & publiceringsplattformar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-r from-sky-500 to-indigo-500">
+    <header class="bg-slate-500 p-10 pb-5">
+        <div>
+            <h1 class="font-medium text-4xl text-gray-100">CSS-ramverk & publicerings<wbr>plattormar</h1>
+            <nav class="mt-4">
+                <ul class="sm:inline-flex">
+                    <li class="sm:mr-10"><a class="text-gray-100 text-opacity-50 hover:text-opacity-75"
+                            href="index.html">Start</a></li>
+                    <li class="sm:mr-10"><a class="text-gray-100 text-opacity-50 hover:text-opacity-75"
+                            href="bootstrap.html">Bootstrap</a></li>
+                    <li class="sm:mr-10"><a class="text-gray-100 text-opacity-100" href="tailwind.html">TailwindCSS</a>
+                    </li>
+                    <li class="sm:mr-10"><a class="text-gray-100 text-opacity-50 hover:text-opacity-75"
+                            href="">Publicering</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto p-10 bg-gray-100">
+        <h2 class="text-3xl text-blue-900">TailwindCSS</h2>
+        <section>
+            <h3 class="text-xl text-indigo-800 pt-5">Om TailwindCSS</h3>
+        </section>
+
+        <section class="bg-blue-100 rounded-md p-5">
+            <h3 class="text-xl text-indigo-800 ">Mina åsikter</h3>
+
+        </section>
+
+        <section>
+            <h3 class="text-xl text-indigo-800 pt-5">Demo av tabeller och formulär</h3>
+
+            <h4 class="text-lg text-indigo-700 mt-4">Tabell</h4>
+            <p>En tabell som listar katter.</p>
+            <div class="overflow-auto sm:ms-4 mb-4">
+            <table id="catTable" class="min-w-full table-auto border-collapse mt-4 bg-white text-left">
+                <thead class="bg-blue-200">
+                    <tr>
+                        <th class="p-2">Namn</th>
+                        <th class="p-2">Storlek</th>
+                        <th class="p-2">Beskrivning</th>
+                        <th class="p-2">Rekom<wbr>mend<wbr>erad</th>
+                        <th class="p-2">Radera katt</th>
+                    </tr>
+                </thead>
+                <tbody id="catTBody">
+                    <!-- Fylls på från localStorage -->
+                </tbody>
+            </table>
+        </div>
+
+
+            <h4 class="text-lg text-indigo-700 mt-10">Formulär</h4>
+            <p>Ett formulär för att lägga till en katt i tabellen ovan.</p>
+            <form class="max-w-xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 m-4 ms-0 sm:ms-4 w-full min-w-[200px]">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Namn på katten: </label>
+                    <input
+                        class="shadow appearance-none border border-blue-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring focus:ring-blue-100"
+                        type="text" name="name" id="name" required>
+                    <span id="nameErr" class="text-sm mt-2 text-red-500">Vänligen fyll i detta fält.</span>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="size">Storlek: </label>
+                    <div class="inline-block relative  w-full max-w-64">
+                        <select
+                            class="block appearance-none w-full bg-white border border-blue-200 hover:border-blue-500 px-4 py-2 pr-8 rounded shadow text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            name="size" id="size">
+                            <option value="Liten">Liten</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Stor">Stor</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Beskrivning: </label>
+                    <textarea
+                        class="min-h-[100px] shadow appearance-none border border-blue-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring focus:ring-blue-100"
+                        name="description" id="description" required></textarea>
+                    <span id="descErr" class="text-sm mt-2 text-red-500">Vänligen fyll i detta fält.</span>
+                </div>
+
+
+                <div class="mb-4">
+                    <p>Skulle du rekommendera den här katten?</p>
+                    <input type="checkbox" id="recommended" name="recommended" value="recommended">
+                    <label for="recommended">Ja, jag skulle rekommendera den här
+                        katten.</label>
+                </div>
+                <button
+                    class="bg-sky-950 opacity-50 cursor-not-allowed text-white font-bold mt-4 py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+                    id="addCat">Lägg till katt</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="mt-5 mx-auto bg-gray-800 text-gray-100 text-sm text-center p-5">
+        <p>Inlämningsuppgift för moment 1 i kursen Fullstack-utveckling med ramverk (DT193G)
+            vid Mittuniversitetet,
+            HT24
+            skapad av Kajsa Classon.</p>
+    </footer>
+    <script src="js/tw.js"></script>
+
+</body>
+
+</html>
