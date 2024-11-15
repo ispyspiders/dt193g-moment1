@@ -120,26 +120,26 @@ function loadStorage() {
             let nameData = document.createElement("td"); // Ny tabell-data element
             let nameText = document.createTextNode(savedData[i].name);
             nameData.appendChild(nameText);
-            nameData.classList.add("p-4", "content-start"); // Lägg till padding (TailwindCSS)
+            nameData.classList.add("p-4"); // Lägg till padding (TailwindCSS)
             newRow.appendChild(nameData);
 
             let sizeData = document.createElement("td"); // Ny tabell-data element
             let sizeText = document.createTextNode(savedData[i].size);
             sizeData.appendChild(sizeText);
-            sizeData.classList.add("p-4", "content-start");
+            sizeData.classList.add("p-4");
             newRow.appendChild(sizeData);
 
 
             let descriptionData = document.createElement("td"); // Ny tabell-data element
             let descriptionText = document.createTextNode(savedData[i].description);
             descriptionData.appendChild(descriptionText);
-            descriptionData.classList.add("p-4", "content-start");
+            descriptionData.classList.add("p-4");
             newRow.appendChild(descriptionData);
 
             let recData = document.createElement("td"); // Ny tabell-data element
             let recText = document.createTextNode(savedData[i].recommended ? "Ja" : "Nej");
             recData.appendChild(recText);
-            recData.classList.add("p-4", "content-start");
+            recData.classList.add("p-4");
             newRow.appendChild(recData);
 
             // Skapa ta bort-knapp
@@ -150,7 +150,7 @@ function loadStorage() {
             removeBtn.onclick = function () {
                 removeCat(i);
             };
-            removeData.classList.add("p-4", "content-start");
+            removeData.classList.add("py-4", "text-center");
             removeData.appendChild(removeBtn);
             newRow.appendChild(removeData);
 

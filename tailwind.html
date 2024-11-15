@@ -29,38 +29,76 @@
     </header>
 
 
-    <main class="container mx-auto p-10 bg-gray-100">
-        <h2 class="text-3xl text-blue-900">TailwindCSS</h2>
-        <section>
-            <h3 class="text-xl text-indigo-800 pt-5">Om TailwindCSS</h3>
+    <main class="container mx-auto p-4 sm:p-10 bg-gray-100">
+        <!-- Info -->
+        <section class="lg:grid lg:grid-cols-2 gap-x-10 items-start">
+            <h2 class="text-3xl font-semibold text-blue-900 col-span-2">TailwindCSS</h2>
+            <section class="max-w-lg">
+                <h3 class="text-xl text-indigo-800 font-semibold pt-5 mb-1">Om TailwindCSS</h3>
+                <p class="text-base/7 pb-4"><a class="text-orange-500 font-medium hover:text-opacity-75 visited:text-orange-700" href="https://tailwindcss.com/">TailwindCSS</a> är ett utility-first ramverk, vilket innebär att det inte
+                    innehåller färdiga komponenter. Det
+                    innehåller istället verktygs-klasser som används för att skapa egen design. Bland dessa finns
+                    verktyg
+                    för layout, färger och marginaler. Tailwind har ett mobile-first tänk kring design och innehåller
+                    ett
+                    enkelt system för responsivitet.
+                </p>
+                <p class="text-base/7  pb-2">Tailwind fungerar genom att skanna HTML-filer och JavaScript-komponenter
+                    etc efter klassnamn och
+                    genererar sedan motsvarande stilar som skrivs till ett statiskt CSS-dokument. Detta gör ramverket
+                    snabbt
+                    och resurssnålt, i och med att ingen onödig kod skickas med.
+                </p>
+                <p class="text-base/7 pb-4">Tailwind går att använda via CLI (rekommenderat) eller CDN.
+                </p>
+                <p class="text-base/7  pb-4">Med Tailwind ska det vara enkelt att göra egna modifieringar. Detta sker
+                    via en speciell JavaScript-fil.
+                    I den kan man justera saker som färger och typsnitt, och skapa och ändra komponenter.
+                </p>
+                <p class="text-base/7 pb-4">Tailwind är relativt enkelt att komma igång med, speciellt om man har
+                    tidigare erfarenhet av CSS. Då det
+                    är ett populärt ramverk finns det resurser att tillgå vid behov av hjälp. Dokumentationen är också
+                    välskriven och enkel att hitta i.
+                </p>
+            </section>
+
+            <!-- Åsikter -->
+            <section class="bg-blue-100 rounded-md p-4 md:p-10 lg:max-w-xl">
+                <h3 class="text-xl text-indigo-800 font-semibold mb-2">Mina åsikter</h3>
+                <p class="text-base/7 pb-4 ">Jag tycker Tailwind var lätt att komma igång och arbeta med. För mig kändes
+                    det mer logiskt än Bootstrap. Jag gillar också att man får mer kontroll över designen.
+                </p>
+                <p class="text-base/7 pb-4">Enkelt när man skriver det och bygger designen, men en mardröm att gå
+                    tillbaka och ändra i. Svårt att hitta det man letar efter när allting är ”inline”. Detta kanske
+                    speciellt nu under inlärningsperioden, då man kollar upp något medan man gör det och glömmer när man
+                    går vidare, så när man ska gå tillbaka och göra ändringar vet man inte exakt vad det är man letar
+                    efter. (Läsbarheten har dock inget med detta att göra, den är dålig oavsett).</p>
+            </section>
         </section>
 
-        <section class="bg-blue-100 rounded-md p-5">
-            <h3 class="text-xl text-indigo-800 ">Mina åsikter</h3>
-
-        </section>
-
+        <!-- Demo -->
         <section>
-            <h3 class="text-xl text-indigo-800 pt-5">Demo av tabeller och formulär</h3>
+            <h3 class="text-xl text-indigo-800 pt-10 font-semibold ">Demo av tabeller och formulär</h3>
 
+            <!-- Tabell -->
             <h4 class="text-lg text-indigo-700 mt-4">Tabell</h4>
             <p>En tabell som listar katter.</p>
-            <div class="overflow-auto sm:ms-4 mb-4">
-            <table id="catTable" class="min-w-full table-auto border-collapse mt-4 bg-white text-left">
-                <thead class="bg-blue-200">
-                    <tr>
-                        <th class="p-2">Namn</th>
-                        <th class="p-2">Storlek</th>
-                        <th class="p-2">Beskrivning</th>
-                        <th class="p-2">Rekom<wbr>mend<wbr>erad</th>
-                        <th class="p-2">Radera katt</th>
-                    </tr>
-                </thead>
-                <tbody id="catTBody">
-                    <!-- Fylls på från localStorage -->
-                </tbody>
-            </table>
-        </div>
+            <div class="overflow-auto sm:ms-4 mb-4 max-w-xl">
+                <table id="catTable" class="min-w-full table-fixed border-collapse mt-4 bg-white text-left">
+                    <thead class="bg-blue-200">
+                        <tr>
+                            <th class="p-2 max-w-24">Namn</th>
+                            <th class="p-2 w-20">Storlek</th>
+                            <th class="p-2">Beskrivning</th>
+                            <th class="p-2 max-w-28">Rekom<wbr>mend<wbr>erad</th>
+                            <th class="p-2 text-center">Radera katt</th>
+                        </tr>
+                    </thead>
+                    <tbody id="catTBody">
+                        <!-- Fylls på från localStorage -->
+                    </tbody>
+                </table>
+            </div>
 
 
             <h4 class="text-lg text-indigo-700 mt-10">Formulär</h4>
