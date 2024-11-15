@@ -1,7 +1,8 @@
 # Moment 1 - CSS-ramverk & publiceringsplattformar
-#### Av Kajsa Classon, HT24. DT193G – Fullstack-utveckling med ramverk
+#### DT193G – Fullstack-utveckling med ramverk
+#### Av Kajsa Classon, HT24. 
 
-
+En webbplats som utforskar CSS-ramverken Bootstrap och TailwindCSS. Webbplatsen använder LocalStorage för att spara och läsa ut data från formulär till tabell.
 
 ### Uppgiftsbeskrivning
 Uppgiften går ut på att i en sammanhängade webbplats utvärdera minst två stycken CSS-ramverk.
