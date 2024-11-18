@@ -38,12 +38,106 @@
                 <h3 class="text-xl text-indigo-800 font-semibold pt-5 mb-1">Om Netlify</h3>
                 <p class="text-base/7 pb-4"><a
                         class="text-orange-500 font-medium hover:text-opacity-75 visited:text-orange-700"
-                        href="">Netlify</a> är
+                        href="">Netlify</a> är en publicerings-plattform som passar små till medelstora projekt, och
+                    lämpar sig extra väl för statiska sidor och serverlösa applikationer, och när en snabb
+                    deployment-process krävs. </p>
+
+                <p class="text-base/7 pb-4">
+                    Netlify har stöd för Continuous Deployment med Git. Vilket betyder att Netlify automatiskt kan
+                    upptäcka uppdateringar i koden i ett kopplat Git-repository och uppdatera den publicerade
+                    webbplatsen därefter.
+                </p>
+                <h4 class="text-lg text-indigo-800 font-semibold mt-2 mb-0">Kodstöd</h4>
+                <p class="text-base/7 pb-4">Netlify har stöd för bland annat:
+                </p>
+                <ul>
+                    <li class="list-disc list-outside mb-1 ms-10 ps-2 text-base/7">Statiska webbplatser med HTML, CSS,
+                        JavaScript
+                    </li>
+                    <li class="list-disc list-outside mb-1 ms-10 ps-2 text-base/7">JavaScript-ramverk så som React, Vue,
+                        Svelte, Angular, Gatsby och Next.js
+                    </li>
+                    <li class="list-disc list-outside mb-1 ms-10 ps-2 text-base/7">Serverlösa funktioner med
+                        JavaScript/Node.js, Go, Python, Ruby, Java
+                    </li>
+                    <li class="list-disc list-outside mb-1 ms-10 ps-2 text-base/7">Statiska site-generatorer så som
+                        Jekyll, Hugo, Eleventy
+                    </li>
+                    <li class="list-disc list-outside mb-1 ms-10 ps-2 text-base/7">CMS så som Drupal och Wordpress (via
+                        statisk export)
+                    </li>
+                </ul>
+
+
+                <h4 class="text-lg text-indigo-800 font-semibold mt-6 mb-0">Kostnad</h4>
+                <p class="text-base/7 pb-4">Netlify finns i tre medlemsnivåer: Free & Starter, Pro och Enterprice.</p>
+                <p class="text-base/7 pb-4">Free & Starter är en gratis-plan som passar för personliga projekt,
+                    prototyper och för att
+                    prova-på. Med Free & Starter får man 100GB bandbredd och 300 build minuter.</p>
+                <p class="text-base/7 pb-4">Pro kostar $19 per person/månad. Pro ger bland annat möjligheten att
+                    arbeta i team och lösenordsskydda webbplatser. Man får även utökad bandbredd (1TB) och fler
+                    build minuter (25 000).</p>
+                <p class="text-base/7 pb-4">Enterprice är för stora organisationer och inga prisuppgifter finns
+                    att tillgå. Men planen ger tillgång till säkerhetsfunktioner och hantering på
+                    organisationsnivå.</p>
+
+                <h4 class="text-lg text-indigo-800 font-semibold mt-6 mb-0">Begränsningar</h4>
+                <p class="text-base/7 pb-4">Gratisplanen är limiterad. För stora eller populära projekt kan man snabbt
+                    behöva uppgradera till en betald plan.
+                </p>
+                <p class="text-base/7 pb-4">Netlify har begränsat stöd för traditionella servrar, vilket kan ställa till
+                    det om man behöver full kontroll över servern exempelvis pga mer komplexa backend-lösningar.
+                </p>
+                <p class="text-base/7 pb-4">Då Netlify är inriktat på statiska sidor och serverlösa funktioner kan det
+                    vara lite komplicerat att hantera dynamiska applikationer.
+                </p>
             </section>
 
             <!-- Åsikter -->
             <section class="bg-blue-100 rounded-md p-4 md:p-10 lg:max-w-xl">
                 <h3 class="text-xl text-indigo-800 font-semibold mb-2">Mina åsikter</h3>
+                <p class="text-base/7 pb-4">Det var väldigt enkelt att komma igång med Netlify och sätta upp Continuous
+                    Deployment. Det är nästan som att jag inte har så mycket att säga om min upplevelse för att allt
+                    gick så snabbt och lätt. Netlify gav ett bra första intryck, men självklart måste jag använda det
+                    mer än en gång för att på riktigt kunna utvärdera det.
+                </p>
+                <p class="text-base/7 pb-0">Jag gillar också att det är möjligt att själv välja domännamn (eller ja, underdomän typ "mitt-namn.netlify.app"). Mycket roligare än studenter.miun/världens/längsta/sökväg…
+                </p>
+
+                <hr class="h-px my-8 bg-gray-400 border-0">
+
+                <h3 class="text-xl text-indigo-800 font-semibold mt-10 mb-2">Instruktioner för att komma igång med Netlify
+                </h3>
+                <ol>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Skapa ett konto på Netlify eller logga in med ett GitHub-, GitLab-, eller Bitbucket-konto. Jag
+                        loggade in med mitt GitHub-konto.
+                    </li>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Förbered webbplats för publikation.
+                    </li>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Skapa ett Git-repository för webbplatsen.
+                    </li>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Anslut Git-repot till Netlify. Detta kan göras via Netlify Dashboard genom att klicka på ”New
+                        site from Git”. Är man inte redan inloggad uppmanas man att logga in på sin Git-tjänst. Sedan är
+                        det bara att välja vilket repo som ska anslutas, ange bygg-inställningar (om det behövs), och
+                        klicka på ”Deploy site”.
+                    </li>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Netlify bygger och distribuerar webbplatsen och efter en stund har du en länk till den
+                        publicerade webbplatsen.
+                    </li>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Anpassa domännamn (valfritt). Netlify generarar en slumpmässig underdomän för sidan. Denna går
+                        att anpassa antingen genom att använda en egen domän eller genom att ge underdomänen ett nytt
+                        namn.
+                    </li>
+                    <li class="list-decimal list-outside mb-1 ms-10 ps-2 text-base/7">
+                        Continuous Deployment. När ändringar görs i vald branch i Git distribueras de automatiskt till Netlify.
+                    </li>
+                </ol>
 
             </section>
         </section>
